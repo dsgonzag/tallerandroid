@@ -5,6 +5,18 @@ const router = jsonServer.router('sample.json');
 const middlewares = jsonServer.defaults();
 const express = require ('express');
 const app = express();
+var cors = require('cors');
+
+app.use(cors())
+ 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(port);
 
 const morgan = require('morgan');
 //setting
