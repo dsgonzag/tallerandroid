@@ -16,6 +16,6 @@ app.use(require('./routes/index'));
 app.use('/api/movies',require('./routes/movies'));
 app.use('/api/users',require('./routes/users'));
 //starting the server
-app.listen(3000, ()=> {
+/*app.listen(3000, ()=> {
     console.log(`Server on port ${app.get('port')}`);
-});
+});*/
